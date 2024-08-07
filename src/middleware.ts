@@ -7,7 +7,7 @@ export function middleware(request: NextRequest) {
       // console.log('middleware excecute : ',request.url)
           //belum login
   if (!login){ 
-    return NextResponse.redirect(new URL('/', request.url))
+    return NextResponse.redirect(new URL('/login', request.url))
   }
       request.cookies.set('name','vika rahmanova nurulianov')
       console.log('berhasil membuat cookies',request.cookies.get('name'))
